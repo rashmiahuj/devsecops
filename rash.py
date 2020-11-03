@@ -6,7 +6,7 @@ def hello():
 	return "welcome to the Oracle web app with python in DevSecOPs !! This is new change"
 
 @app.route('/oracle') 
-def hello(): 
+def hello1(): 
 	return "Welcome to Oracle Containerization process !!"
 
 
