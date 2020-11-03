@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/') 
 def hello(): 
-	return "welcome to the Oracle web app with python in DevSecOPs !!"
+	return "welcome to the Oracle web app with python in DevSecOPs !! This is new change"
 
 
 if __name__ == "__main__": 
