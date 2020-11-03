@@ -1,10 +1,10 @@
 
 FROM python
-MAINTAINER ashutoshh@linux.com , ashutoshh singh 
+MAINTAINER rashmi.ahuja@oracle.com , rashmi ahuja 
 RUN pip install flask
 # installing flask python library using pip
 RUN mkdir /myapp
-COPY ashu.py /myapp/ashu.py
+COPY ashu.py /myapp/rash.py
 WORKDIR /myapp
 EXPOSE 5000
-CMD ["python","ashu.py"]
+CMD ["python","rash.py"]
