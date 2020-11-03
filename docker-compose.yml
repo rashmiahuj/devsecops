@@ -4,4 +4,4 @@ services:
   image: rashmidoc/nginxrash:v1  # the same image we build in build step 
   container_name: r1
   ports:
-  - "8888:5000"
+  - "8887:5000"
