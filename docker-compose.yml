@@ -4,4 +4,4 @@ version: "3.8"
    image: rashmidoc/oracleweb:appv1
    container_name: rashwebcc1
    ports:
-    - "7722:80"
+   - "7722:80"
