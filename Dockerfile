@@ -1,10 +1,7 @@
-
-FROM python
-MAINTAINER rashmi.ahuja@oracle.com , rashmi ahuja 
-RUN pip install flask
-# installing flask python library using pip
-RUN mkdir /myapp
-COPY rash.py /myapp/rash.py
-WORKDIR /myapp
-EXPOSE 5000
-CMD ["python","rash.py"]
+FROM  centos
+MAINTAINER rashmi.ahuja@oracle.com
+RUN yum install httpd -y
+WORKDIR /var/www/html/
+COPY rashwebapp .
+EXPOSE 80
+ENTRYPOINT httpd -DFOREGROUND
