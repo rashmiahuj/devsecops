@@ -1,6 +1,7 @@
 from flask import Flask 
 app = Flask(__name__) 
 
+
 @app.route('/') 
 def hello1(): 
 	return "welcome to the Oracle web app with python in DevSecOPs !! This is new change"
