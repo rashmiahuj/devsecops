@@ -1,7 +1,7 @@
-version: "3.8" # latest version of Dockerfile
-services:
- rash1: # name of application 
-  image: rashmidoc/nginxrash:v1  # the same image we build in build step 
-  container_name: r1
-  ports:
-  - "4449:5000"
+version: "3.8"
+ services:
+  rashweb1:
+   image: rashmidoc/oracleweb:appv1
+   container_name: rashwebcc1
+   ports:
+    - "7722:80"
