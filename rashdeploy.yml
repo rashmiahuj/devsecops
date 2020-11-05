@@ -18,7 +18,7 @@ spec:
         app: rashhtmlapp
     spec:
       containers:
-      - image: rashmidoc/oracleweb:appv1
+      - image: rashmidoc/oracleweb:appv2
         name: oracleweb
         resources: {}
 status: {}
