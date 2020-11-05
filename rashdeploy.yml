@@ -1,3 +1,9 @@
+# creating namespace 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rash-space
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,8 +11,9 @@ metadata:
   labels:
     app: rashhtmlapp
   name: rashhtmlapp
+  namespace: rash-space
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: rashhtmlapp
@@ -22,3 +29,18 @@ spec:
         name: oracleweb
         resources: {}
 status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rash-svc-1 # name of service 
+  namespace: rash-space
+spec:
+ports:
+- name: webport
+  port: 1231
+  protocol: TCP
+  targetPort: 80 # it must be same as your ozriginal app port 
+type: LoadBalancer 
+selector: # use of selector to find the pod with below given labels / tag 
+  app: rashhtmlapp
